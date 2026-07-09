@@ -11,11 +11,14 @@ class QuizApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Quiz App',
-      debugShowCheckedModeBanner: false,
+      title: 'Premium Quiz App',
+      debugShowCheckedModeBanner: false, // Hides the debug banner for a cleaner look
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        scaffoldBackgroundColor: Colors.grey[50],
+        // Aligns default app colors with your new purple gradient UI
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFF4A00E0),
+        ),
+        useMaterial3: true,
       ),
       home: const QuizScreen(),
     );
